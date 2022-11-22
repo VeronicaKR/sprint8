@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 
 
 
-export const Starships = () => {
+export const Starships = ({count,sum}) => {
 
   const [showShips, setShowShips] = useState([]);
 
   const getShowShips = async() => {
-    const newShowShips = await GetList();
+    const newShowShips = await GetList(count);
     setShowShips(newShowShips);
     
   }
 
   useEffect(() => {
     getShowShips();
-  }, [])
+  }, [count])
   
 
 
@@ -29,10 +29,14 @@ export const Starships = () => {
           <StarShipsStyled key={item.name}>
            <Link to={`/app/${item.name}`}> {item.name.toUpperCase()}</Link> 
             <br/>{item.model}
+            <br/>
+            
           </StarShipsStyled>
+          
         ))
       }
     </ol>
+    <button onClick={sum}>{count}</button>
     </>
   )
 }

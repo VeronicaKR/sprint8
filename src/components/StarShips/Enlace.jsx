@@ -3,10 +3,11 @@ import { GetList } from '../List/GetList'
 import {  useParams } from 'react-router-dom';
 import { EnlaceStyled } from './EnlaceStyled';
 
-export const Enlace = () => {
+export const Enlace = ({count}) => {
 
   const [ship, setShips] = useState();
   const [photo, setPhoto] = useState();
+ 
   const param = useParams();
 
   useEffect(() => {
@@ -25,8 +26,9 @@ export const Enlace = () => {
   }, [ship])
 
 
+
   const getShips = async() => {
-    const newShowShips = await GetList();
+    const newShowShips = await GetList(count);
      const ship = newShowShips.find(element => {
         return element.name === param.name
       })
@@ -70,6 +72,7 @@ export const Enlace = () => {
         <li className="list-group-item black-li">crew: {ship.crew}</li>
       </ul>
  </div>
+
  </div>    
       </>}
       
