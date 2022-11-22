@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { GetList } from '../List/GetList'
 import { StarShipsStyled } from './StarShipsStyled';
+import { Link } from 'react-router-dom';
+
 
 
 export const Starships = () => {
@@ -24,7 +26,9 @@ export const Starships = () => {
     <ol>
       {
         showShips.map( item => (
-          <StarShipsStyled key={item.name}>{item.name.toUpperCase()} <br/>{item.model}
+          <StarShipsStyled key={item.name}>
+           <Link to={`/app/${item.name}`}> {item.name.toUpperCase()}</Link> 
+            <br/>{item.model}
           </StarShipsStyled>
         ))
       }

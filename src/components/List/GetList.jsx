@@ -4,11 +4,6 @@ export const GetList = async() => {
     const resp = await fetch(url);
     const {results} = await resp.json()
   
-    const list = results.map(item => ({
-     name: item.name,
-     model: item.model,
-    }));
-    console.log(list);
-    return list;
+    return results;
   }
   

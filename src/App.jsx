@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import AppRoutes from "./aplication/AppRoutes";
 import { Header } from "./components/Header/Header";
 import { Pages } from "./components/Pages/Pages";
@@ -6,16 +6,20 @@ import { PageStyled } from "./components/PageStyled";
 
 
 
+
 function App() {
+
+  
+
   return (
     <BrowserRouter>
    <PageStyled>
 
-    <div className="container " style={{height:'100vh'}}>
+    <div className="container " style={{minHeight:'100vh'}}>
       <Header/>
       <Pages/> 
       <AppRoutes/>
-
+ 
 
 
       </div>
