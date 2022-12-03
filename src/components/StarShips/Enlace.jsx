@@ -51,6 +51,7 @@ export const Enlace = ({count}) => {
       
       <>
       <img src = {`https://starwars-visualguide.com/assets/img/starships/${photo}.jpg`} alt={ship.name}/>
+      <span class="border-bottom border-danger "></span>
       <div className="card-body ">
         <h1 className="card-title">{ship.name}</h1>
         <h5 className="card-text">{ship.model}</h5>

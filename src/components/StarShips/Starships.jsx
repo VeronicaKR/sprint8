@@ -36,7 +36,7 @@ export const Starships = ({count,sum}) => {
         ))
       }
     </ol>
-    <button onClick={sum}>{count}</button>
+    <button onClick={sum}>next</button>
     </>
   )
 }

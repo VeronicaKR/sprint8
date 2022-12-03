@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 export const PagesStyled = styled.div`
-    color:white;
+    color:#949191;
     display:flex;
     justify-content:center;
+    align-items:center;
 
-    margin:0px;
-    padding:0px;
+   
+   
+ a{
     
+    padding: 5px; 
+    border-right:1px solid;
+    border-left:1px solid;
+ }   
 `
