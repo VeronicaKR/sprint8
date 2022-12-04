@@ -6,6 +6,11 @@ export const HeaderStyled = styled.div`
     margin:0px;
     color:#949191;
     
+    a{
+        color:white;
+        margin-right:5px;
+        margin-left:5px;
+    }
 
 `
 
