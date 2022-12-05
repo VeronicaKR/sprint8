@@ -9,7 +9,9 @@ export const Header = () => {
     <div className="row justify-content-end ">
     <div className="col-4 align-self-center my-3">
         <img src={logosw}  alt="" width="75%"/></div>
-    <div className="col-4 align-self-center d-flex justify-content-end"><Link to="/login">LOGIN </Link> // <Link to="/sign">SIGN UP</Link></div>
+    <div className="col-4 align-self-center d-flex justify-content-end"><Link to="/login">LOGIN </Link> // 
+    <Link to="/sign">SIGN UP</Link> // 
+    <Link to="/logout">LOGOUT</Link></div>
 
     </div>
   </HeaderStyled>

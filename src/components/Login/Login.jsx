@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState} from "react";
 import { LoginStyled } from "./LoginStyled";
 import { useNavigate } from 'react-router-dom'
 
-export const Login = ({users}) => {
+export const Login = ({users,setIsLoged}) => {
   const [email, setEmail] = useState('');
   const [pasword, setPasword] = useState('');
+  
   const navigate = useNavigate();
+  let exist = '';
 
+   
   const onSubmit = (event) => {
     event.preventDefault();
     
@@ -20,17 +23,20 @@ export const Login = ({users}) => {
         return
     }
     
-    const exist = users.find(element => element.email === email && element.pasword === pasword)
+    exist = users.find(element => element.email === email && element.pasword === pasword)
  
 
     if (exist){
       alert('EXISTE')
       console.log('usuario registrado')
+      setIsLoged(true);
       return
     }alert('NOT FOUND THIS CREDENTIALS')
     console.log('usuario no registrado')
     navigate("/sign")
 
+
+   
 
   }
     
