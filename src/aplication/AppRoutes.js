@@ -51,7 +51,6 @@ export default function AppRoutes() {
                 <>
                 <Route path="/login" element={<Login users={users} setIsLoged={setIsLoged}/>} />   
                 <Route path="/sign" element={<Sign users={users} setUsers={setUsers}/>} />
-                
                 <Route path="/*" element={<Navigate to={"/login"}/>}/> 
                 </>
             }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { GetList } from '../List/GetList'
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { EnlaceStyled } from './EnlaceStyled';
 
 export const Enlace = ({count}) => {
@@ -43,15 +43,10 @@ export const Enlace = ({count}) => {
     <>
     < EnlaceStyled className="card" style={{width: "100%"}}>
       
-
-
-    
-    
       { ship && 
-      
       <>
       <img src = {`https://starwars-visualguide.com/assets/img/starships/${photo}.jpg`} alt={ship.name}/>
-      <span class="border-bottom border-danger "></span>
+      <span className="border-bottom border-danger "></span>
       <div className="card-body ">
         <h1 className="card-title">{ship.name}</h1>
         <h5 className="card-text">{ship.model}</h5>
