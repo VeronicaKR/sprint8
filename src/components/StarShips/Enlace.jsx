@@ -35,9 +35,6 @@ export const Enlace = ({count}) => {
      setShips(ship);     
   }
 
-  
-  
-
 
   return (
     <>
